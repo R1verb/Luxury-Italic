@@ -28,7 +28,7 @@ $body-back: #FEFDFC;
 body {
     background: $body-back;
 }
-.scroll {
+body.scroll {
     overflow-y: hidden;
 }
 
