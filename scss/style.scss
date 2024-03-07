@@ -1,0 +1,370 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital@0;1&family=IBM+Plex+Mono&family=Inter&display=swap');
+
+// FONTS
+
+// font-family: "EB Garamond", serif;
+// font-family: "Inter", sans-serif;
+// font-family: "IBM Plex Mono", monospace;
+
+// FONTS
+
+
+
+// COLOR
+
+$main: #000;
+$main-text: #fff;
+$highlighted: #F9F7F4;
+$not-highlighted: #8C8C8C;
+$header_subtext: #383230;
+$subtext: #555555;
+$subtitle: #817A70;
+$body-back: #FEFDFC;
+
+
+// COLOR
+
+
+body {
+    background: $body-back;
+}
+.scroll {
+    overflow-y: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    padding: 0 100px;
+    margin: 0 auto;
+}
+
+
+// HEADER
+
+
+.up-header_content {
+    background: $header_subtext;
+}
+
+.up-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 6px 0;
+}
+
+.up-header_text {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 18px;
+    text-align: center;
+    color: $main-text;
+    text-transform: uppercase;
+}
+
+.up-header_right {
+    display: flex;
+    gap: 32px;
+}
+
+
+
+.burger_menu {
+    position: relative;
+    display: none;
+    width: 25px;
+    height: 20px;
+    z-index: 3;
+}
+
+.burger_menu span {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    border-radius: 1px;
+    background: $header_subtext;
+    top: 9px;
+    transform: translate(50% -50%);
+    left: 0;
+    transition: all .3s;
+}
+.burger_menu::after,
+.burger_menu::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    border-radius: 1px;
+    background: $header_subtext;
+    left: 0;
+    transition: all .3s;
+}
+.burger_menu::after {
+    top: 0;
+}
+.burger_menu::before {
+    bottom: 0;
+}
+.burger_menu-active span {
+    transform: scale(0);
+}
+.burger_menu-active::after {
+    transform: rotate(45deg);
+    top: 9px;
+}
+.burger_menu-active::before {
+    transform: rotate(-45deg);
+    bottom: 9px;
+}
+.burger_menu-active::after,
+.burger_menu-active::before {
+    background: $highlighted;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+    align-items: center;
+}
+
+.nav_list {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+.nav_list-active {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: block;
+    z-index: 2;
+    background: $header_subtext;
+    overflow-y: auto;
+}
+
+.nav_link {
+    font-family: "Inter", sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 12px;
+    letter-spacing: 0em;
+    color: $header_subtext;
+}
+
+.header_btn {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    text-align: center;
+}
+
+.header_signup {
+    font-family: "Inter", sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 12px;
+    letter-spacing: 0em;
+    align-items: center;
+    display: block;
+    color: $header_subtext;
+}
+
+.header_search {
+    display: block;
+}
+
+.header_cart {
+    display: block;
+}
+
+.subheader_section {
+    background: $highlighted;
+}
+
+.subheader {
+    padding: 80px 0;
+}
+
+.subheader_title {
+    font-family: "EB Garamond", serif;
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 77px;
+    letter-spacing: 3.2px;
+    text-align: center;
+    color: $main;
+}
+
+// HEADER
+
+// BRAND_SECTION
+
+.brand_section {
+    background-image: url(../img/brand.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 600px;
+}
+
+// BRAND_SECTION
+
+// BRAND-TEXT_SECTION
+
+.brand-title_section {
+    padding: 80px 0;
+}
+
+.brand_title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.brand-title_text {
+    font-family: "EB Garamond", serif;
+    font-size: 34px;
+    font-weight: 400;
+    line-height: 48px;
+    letter-spacing: 2px;
+    color: $main;
+    max-width: 590px;
+    display: block;
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.brand-title_subtext {
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 14px;
+    letter-spacing: 0em;
+    color: $main;    
+    border-bottom: 1px solid $main;
+    padding-bottom: 5px;
+}
+
+// BRAND-TEXT_SECTION
+
+
+// BRAND-LIST_SECTION
+
+.brand-list_section {
+    background: $highlighted;
+    padding: 30px 0;
+}
+
+.brand_list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.brand_item {
+
+}
+
+// BRAND-LIST_SECTION
+
+
+
+
+// MEDIA
+
+@media (max-width: 968px) {
+    .burger_menu {
+        display: block;
+    }
+    .nav_list {
+        display: none;
+    }
+    .header_logo {
+        transform: translateX(50px);
+        transform: translate(-50% 50%);
+    }
+    .nav_list-active {
+        display: block;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+
+    }
+    .nav_list-active .nav_link {
+        color: $main-text;
+    }
+    .nav_item:not(:last-child) {
+        margin-bottom: 10px;
+    }
+    .nav_link {
+        font-size: 17px;
+        line-height: 25px;
+    }
+    .nav_item:nth-child(1) {
+        padding-top: 75px;
+    }
+}
+
+@media (max-width: 668px) {
+    .container {
+        padding: 0 35px;
+    }
+    .header_logo {
+        transform: translateX(15px);
+    }
+    // .header_btn:not(:nth-child(1)) {
+    //     display: none;
+    // }
+    // .header_btn-active:not(:nth-child(1)) {
+    //     display: block;
+    // }
+    .header_search {
+        display: none;
+    }
+    .header_cart {
+        display: none;
+    }
+    .header_btn-active .header_search,
+    .header_btn-active .header_cart {
+        display: block;
+        z-index: 3;
+    }
+    .header_btn-active .header_search path,
+    .header_btn-active .header_cart path {
+        stroke: $highlighted;
+    }
+    .subheader {
+        padding: 60px 0;
+    }
+    .brand_section {
+        background-position: left;
+    }
+    .brand-title_section {
+        padding: 60px 0;
+    }
+}
+
+// HEIGHT
+
+@media (max-width: 768px) and (min-height: 668px) {
+    .nav_link {
+        font-size: 22px;
+        line-height: 35px;
+    }
+}
+
+@media (max-width: 930px) and (min-height: 1000px) {
+    .nav_link {
+        font-size: 35px;
+        line-height: 55px;
+    }
+}
+
+// HEIGHT
+
+// MEDIA
