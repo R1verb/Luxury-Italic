@@ -28,6 +28,7 @@ $body-back: #FEFDFC;
 body {
     background: $body-back;
 }
+
 body.scroll {
     overflow-y: hidden;
 }
@@ -50,6 +51,7 @@ body.scroll {
     display: flex;
     justify-content: space-between;
     padding: 6px 0;
+    flex-wrap: wrap;
 }
 
 .up-header_text {
@@ -88,6 +90,7 @@ body.scroll {
     left: 0;
     transition: all .3s;
 }
+
 .burger_menu::after,
 .burger_menu::before {
     content: "";
@@ -99,23 +102,29 @@ body.scroll {
     left: 0;
     transition: all .3s;
 }
+
 .burger_menu::after {
     top: 0;
 }
+
 .burger_menu::before {
     bottom: 0;
 }
+
 .burger_menu-active span {
     transform: scale(0);
 }
+
 .burger_menu-active::after {
     transform: rotate(45deg);
     top: 9px;
 }
+
 .burger_menu-active::before {
     transform: rotate(-45deg);
     bottom: 9px;
 }
+
 .burger_menu-active::after,
 .burger_menu-active::before {
     background: $highlighted;
@@ -133,6 +142,7 @@ body.scroll {
     gap: 20px;
     align-items: center;
 }
+
 .nav_list-active {
     position: absolute;
     top: 0;
@@ -273,9 +283,63 @@ body.scroll {
 // BRAND-LIST_SECTION
 
 
+// BRAND-BLOCK_SECTION
+
+
+.brand_blocks {
+    padding: 110px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    gap: 40px;
+}
+.brand_block {
+    display: block;
+    margin-bottom: 20px;
+}
+
+.brand_block-image {
+    width: 580px;
+}
+
+.brand_block-title {
+    font-family: "EB Garamond", serif;
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 34px;
+    letter-spacing: 0.7px;
+    text-align: left;
+    color: $main;
+    margin-top: 10px;
+}
+
+.brand_block-subtitle {
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: $subtext;
+    margin-top: 10px;
+}
+
+// BRAND-BLOCK_SECTION
+
 
 
 // MEDIA
+
+@media (max-width: 1280px) {
+    .brand_blocks {
+        flex-wrap: wrap;
+    }
+    .brand_block-image {
+        width: 700px;
+    }
+}
 
 @media (max-width: 968px) {
     .burger_menu {
@@ -307,6 +371,9 @@ body.scroll {
     }
     .nav_item:nth-child(1) {
         padding-top: 75px;
+    }
+    .brand_block-image {
+        width: 550px;
     }
 }
 
@@ -347,7 +414,13 @@ body.scroll {
     .brand-title_section {
         padding: 60px 0;
     }
+    .brand_block-image {
+        max-width: 450px;
+        width: 100%;
+    }
 }
+
+
 
 // HEIGHT
 
